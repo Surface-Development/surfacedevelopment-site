@@ -4,19 +4,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Deletion – Surface Development</title>
+    <meta name="description" content="How to request deletion of your personal data from Surface Development apps.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Data Deletion – Surface Development">
+    <meta property="og:description" content="How to request deletion of your personal data from Surface Development apps.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Data Deletion – Surface Development">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="page">
-        <header class="header">
-            <div class="container">
-                <a href="/" class="site-name">Surface Development</a>
-            </div>
-        </header>
+    <!-- Background effects -->
+    <div class="bg-mesh"></div>
+    <div class="bg-dots"></div>
+    <div class="bg-grain"></div>
 
-        <main class="content">
+    <div class="page">
+        <!-- Navigation -->
+        <nav class="nav">
             <div class="container">
-                <h1 class="page-title">Data Deletion</h1>
+                <a href="/" class="nav-logo">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 20 L16 8 L24 20" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 24 L26 24" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M10 22 L22 22" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+                    </svg>
+                    Surface
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile overlay -->
+        <div class="nav-overlay">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+
+        <main class="content-light">
+            <div class="container container--narrow">
+                <h1>Data Deletion</h1>
                 <p class="page-meta">How to request deletion of your personal data</p>
 
                 <p>
@@ -66,11 +118,53 @@
             </div>
         </main>
 
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                <p>Contact: <a href="mailto:support@surfacedevelopment.co.uk">support@surfacedevelopment.co.uk</a></p>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="/" class="nav-logo">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                <path d="M8 20 L16 8 L24 20" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 24 L26 24" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                                <path d="M10 22 L22 22" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+                            </svg>
+                            Surface
+                        </a>
+                        <p>Independent software studio building polished mobile apps.</p>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Navigate</h4>
+                        <ul class="footer-links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/products.html">Products</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="/privacy.html">Privacy Policy</a></li>
+                            <li><a href="/terms.html">Terms of Service</a></li>
+                            <li><a href="/data-deletion.html">Data Deletion</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-heading">Contact</h4>
+                        <ul class="footer-links">
+                            <li><a href="mailto:support@surfacedevelopment.co.uk">support@surface<wbr>development.co.uk</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>&copy; 2025 Surface Development</span>
+                    <span>United Kingdom</span>
+                </div>
             </div>
         </footer>
     </div>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>
