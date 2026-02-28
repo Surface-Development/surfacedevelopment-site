@@ -73,6 +73,7 @@
     </script>
 </head>
 <body>
+    <div class="scroll-progress"></div>
     <!-- Background effects -->
     <div class="bg-mesh"></div>
     <div class="bg-dots"></div>
@@ -132,33 +133,33 @@
             </section>
 
             <!-- Features -->
-            <section class="section fade-in" style="position: relative; z-index: 2;">
+            <section class="section">
                 <div class="container">
                     <span class="section-label">Features</span>
-                    <h2 style="margin-bottom: var(--space-lg);">Everything you need to compete</h2>
+                    <h2 class="section-heading">Everything you need to compete</h2>
                     <div class="features-grid">
-                        <div class="card">
+                        <div class="card reveal-scale">
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854Z"/></svg>
                             </div>
                             <h3>Predictions</h3>
                             <p>Forecast finishing positions at pipe band and solo piping/drumming contests throughout the season. Lock in your picks before the contest begins.</p>
                         </div>
-                        <div class="card">
+                        <div class="card reveal-scale">
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
                             <h3>Leagues</h3>
                             <p>Create private leagues and invite friends, family, or fellow piping enthusiasts. See who knows the scene best.</p>
                         </div>
-                        <div class="card">
+                        <div class="card reveal-scale">
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6-6 6 6"/><path d="M6 15l6 6 6-6"/></svg>
                             </div>
                             <h3>Leaderboards</h3>
                             <p>Global and league-specific rankings. Track your accuracy over time and see how you stack up against the competition.</p>
                         </div>
-                        <div class="card">
+                        <div class="card reveal-scale">
                             <div class="card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
                             </div>
@@ -173,32 +174,32 @@
             <section class="section screenshot-area fade-in">
                 <div class="container">
                     <span class="section-label">Preview</span>
-                    <h2 style="margin-bottom: var(--space-lg);">See it in action</h2>
+                    <h2 class="section-heading">See it in action</h2>
                     <div class="screenshot-grid">
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/home.PNG" alt="Home screen" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);"></div>
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/predictions.PNG" alt="Predictions screen" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);"></div>
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/results.PNG" alt="Leagues screen" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/home.PNG" alt="Home screen"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/predictions.PNG" alt="Predictions screen"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/results.PNG" alt="Leagues screen"></div>
                     </div>
                 </div>
             </section>
 
             <!-- Download -->
-            <section class="section fade-in" style="position: relative; z-index: 2; text-align: center;">
+            <section class="section fade-in download-section">
                 <div class="container">
                     <span class="section-label">Download</span>
-                    <h2 style="margin-bottom: var(--space-sm);">Get the app</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: var(--space-lg); max-width: 480px; margin-left: auto; margin-right: auto;">Available on iOS and Android. Download links coming soon.</p>
-                    <div class="download-ctas" style="justify-content: center;">
-                        <span class="btn btn-primary" style="opacity: 0.5; cursor: default;">App Store - Coming Soon</span>
-                        <span class="btn btn-ghost" style="opacity: 0.5; cursor: default;">Play Store - Coming Soon</span>
+                    <h2 class="section-heading">Get the app</h2>
+                    <p class="download-description">Available on iOS and Android. Download links coming soon.</p>
+                    <div class="download-ctas download-ctas--centered">
+                        <span class="btn btn-primary btn-disabled">App Store - Coming Soon</span>
+                        <span class="btn btn-ghost btn-disabled">Play Store - Coming Soon</span>
                     </div>
                 </div>
             </section>
 
             <!-- Legal links -->
-            <section class="section fade-in" style="position: relative; z-index: 2; text-align: center;">
+            <section class="section product-legal fade-in">
                 <div class="container">
-                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                    <p class="product-legal-links">
                         <a href="/privacy.html">Privacy Policy</a> &middot;
                         <a href="/terms.html">Terms of Service</a> &middot;
                         <a href="/data-deletion.html">Data Deletion</a>

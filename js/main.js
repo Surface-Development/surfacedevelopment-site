@@ -3,11 +3,14 @@
 (function () {
     'use strict';
 
-    /* ── Scroll reveal (IntersectionObserver) ────────────────── */
-    const fadeEls = document.querySelectorAll('.fade-in');
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (fadeEls.length && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
+    /* ── Scroll reveal (IntersectionObserver) ────────────────── */
+    var revealSelectors = '.fade-in, .reveal-left, .reveal-right, .reveal-scale';
+    var revealEls = document.querySelectorAll(revealSelectors);
+
+    if (revealEls.length && 'IntersectionObserver' in window && !prefersReducedMotion) {
+        var observer = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
@@ -19,9 +22,52 @@
             { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
         );
 
-        fadeEls.forEach(function (el) {
+        revealEls.forEach(function (el) {
             observer.observe(el);
         });
+    } else if (prefersReducedMotion) {
+        revealEls.forEach(function (el) {
+            el.classList.add('visible');
+        });
+    }
+
+    /* ── Stagger child cards when grid container becomes visible ─ */
+    var staggerGrids = document.querySelectorAll('.capabilities-grid, .values-grid, .features-grid, .products-grid');
+
+    if (staggerGrids.length && 'IntersectionObserver' in window && !prefersReducedMotion) {
+        var gridObserver = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var cards = entry.target.querySelectorAll('.card, .product-card');
+                        cards.forEach(function (card, index) {
+                            card.style.transitionDelay = (index * 100) + 'ms';
+                        });
+                        gridObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
+        );
+
+        staggerGrids.forEach(function (grid) {
+            gridObserver.observe(grid);
+        });
+    }
+
+    /* ── Scroll progress bar ─────────────────────────────────── */
+    var progressBar = document.querySelector('.scroll-progress');
+
+    if (progressBar && !prefersReducedMotion) {
+        function updateProgress() {
+            var scrollTop = window.scrollY || document.documentElement.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
     }
 
     /* ── Sticky nav scroll state ─────────────────────────────── */
