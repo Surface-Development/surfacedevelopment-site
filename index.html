@@ -3,25 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Surface Development — We build apps people love</title>
-    <meta name="description" content="Surface Development is an independent software studio based in the United Kingdom, building polished mobile apps with React Native, Expo, and Supabase.">
+    <title>Surface Development - We build technology people love</title>
+    <meta name="description" content="Surface Development is an independent technology studio based in the United Kingdom, building polished digital products across mobile and web.">
+
+    <meta name="theme-color" content="#0A0F1E">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Surface Development — We build apps people love">
-    <meta property="og:description" content="Independent software studio building polished mobile apps.">
+    <meta property="og:title" content="Surface Development - We build technology people love">
+    <meta property="og:description" content="Independent technology studio building polished digital products.">
     <meta property="og:url" content="https://surfacedevelopment.co.uk/">
+    <meta property="og:image" content="https://surfacedevelopment.co.uk/assets/og-image.png">
+    <meta property="og:site_name" content="Surface Development">
+    <meta property="og:locale" content="en_GB">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Surface Development">
-    <meta name="twitter:description" content="Independent software studio building polished mobile apps.">
+    <meta name="twitter:description" content="Independent technology studio building polished digital products.">
+    <meta name="twitter:image" content="https://surfacedevelopment.co.uk/assets/og-image.png">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://surfacedevelopment.co.uk/">
 
     <!-- Favicon -->
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,19 +38,31 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/styles.css">
 
-    <!-- JSON-LD -->
+    <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Surface Development",
         "url": "https://surfacedevelopment.co.uk",
+        "logo": "https://surfacedevelopment.co.uk/assets/og-image.png",
         "email": "support@surfacedevelopment.co.uk",
-        "description": "Independent software studio building polished mobile apps.",
+        "description": "Independent technology studio building polished digital products.",
+        "sameAs": ["https://github.com/Surface-Development"],
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "GB"
         }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Surface Development",
+        "url": "https://surfacedevelopment.co.uk"
     }
     </script>
 </head>
@@ -58,7 +77,7 @@
         <nav class="nav">
             <div class="container">
                 <a href="/" class="nav-logo">
-                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M8 20 L16 8 L24 20" stroke="#0891B2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6 24 L26 24" stroke="#0891B2" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
                         <path d="M10 22 L22 22" stroke="#0891B2" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
@@ -92,29 +111,29 @@
             <section class="hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1 class="hero-title stagger stagger-1">We build apps<br>people love.</h1>
-                        <p class="hero-subtitle stagger stagger-2">Independent software studio crafting polished mobile experiences with modern tools and thoughtful design.</p>
+                        <h1 class="hero-title stagger stagger-1">We build technology<br>people love.</h1>
+                        <p class="hero-subtitle stagger stagger-2">Independent technology studio crafting polished products across mobile and web, with modern tools and thoughtful design.</p>
                         <div class="hero-actions stagger stagger-3">
                             <a href="/products.html" class="btn btn-primary">View our work</a>
                             <a href="/contact.html" class="btn btn-ghost">Get in touch</a>
                         </div>
                     </div>
                     <div class="hero-visual stagger stagger-4">
-                        <div class="hero-card">
+                        <a href="/products/pipe-band-predictor.html" class="hero-card">
                             <div class="hero-card-label">Our latest</div>
                             <h3>Pipe Band Predictor</h3>
                             <p>Predict finishing positions at pipe band and solo piping/drumming contests throughout the season. Compete in leagues and climb the leaderboard.</p>
                             <div class="hero-card-badges">
                                 <span class="badge">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18a6 6 0 0 0 0-12 6 6 0 0 0 0 12Z"/><path d="M12 2v2"/><path d="M12 20v2"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18a6 6 0 0 0 0-12 6 6 0 0 0 0 12Z"/><path d="M12 2v2"/><path d="M12 20v2"/></svg>
                                     iOS
                                 </span>
                                 <span class="badge">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 16 2-6 2 6"/><path d="M9 16H5"/><path d="M17 8v8"/><path d="M13 12h8"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 16 2-6 2 6"/><path d="M9 16H5"/><path d="M17 8v8"/><path d="M13 12h8"/></svg>
                                     Android
                                 </span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -148,24 +167,24 @@
                     <div class="capabilities-grid">
                         <div class="card">
                             <div class="card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854Z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854Z"/></svg>
                             </div>
                             <h3>Design</h3>
                             <p>Intuitive interfaces that feel native to each platform. We prioritise clarity and delight in every interaction.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
                             </div>
                             <h3>Develop</h3>
-                            <p>Built with React Native, TypeScript, and Supabase. Clean, maintainable code that performs across iOS and Android.</p>
+                            <p>Built with modern, proven tools. Clean, maintainable code that performs across mobile and web.</p>
                         </div>
                         <div class="card">
                             <div class="card-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                             </div>
                             <h3>Ship</h3>
-                            <p>From idea to App Store. We handle the full lifecycle — development, testing, deployment, and ongoing iteration.</p>
+                            <p>From idea to launch. We handle the full lifecycle - development, testing, deployment, and ongoing iteration.</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +195,7 @@
                 <div class="container">
                     <span class="section-label">About us</span>
                     <div class="about-preview-content">
-                        <p>Surface Development is an independent software studio based in the United Kingdom. We build mobile applications that solve real problems with elegant, reliable software.</p>
+                        <p>Surface Development is an independent technology studio based in the United Kingdom. We build technology products that solve real problems with elegant, reliable software.</p>
                         <a href="/about.html" class="btn btn-ghost">Learn more about us</a>
                     </div>
                 </div>
@@ -189,14 +208,14 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="/" class="nav-logo">
-                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28" aria-hidden="true">
                                 <path d="M8 20 L16 8 L24 20" stroke="#0891B2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M6 24 L26 24" stroke="#0891B2" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
                                 <path d="M10 22 L22 22" stroke="#0891B2" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
                             </svg>
                             Surface
                         </a>
-                        <p>Independent software studio building polished mobile apps.</p>
+                        <p>Independent technology studio building polished digital products.</p>
                     </div>
                     <div>
                         <h4 class="footer-heading">Navigate</h4>
@@ -223,7 +242,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <span>&copy; 2025 Surface Development</span>
+                    <span>&copy; <span class="copyright-year"></span> Surface Development</span>
                     <span>United Kingdom</span>
                 </div>
             </div>

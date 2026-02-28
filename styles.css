@@ -499,6 +499,9 @@ a:hover {
 
 /* Hero floating card */
 .hero-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -509,6 +512,12 @@ a:hover {
     max-width: 420px;
     position: relative;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .hero-card::before {

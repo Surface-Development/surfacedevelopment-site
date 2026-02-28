@@ -62,6 +62,11 @@
         });
     }
 
+    /* ── Copyright year ─────────────────────────────────────── */
+    document.querySelectorAll('.copyright-year').forEach(function (el) {
+        el.textContent = new Date().getFullYear();
+    });
+
     /* ── Active nav link ─────────────────────────────────────── */
     var currentPath = window.location.pathname;
 

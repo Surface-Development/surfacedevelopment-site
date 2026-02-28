@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1200">
+    <title>OG Image - Pipe Band Predictor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            background: #0A0F1E;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bg-gradient {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 30% 50%, rgba(8, 145, 178, 0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 80% 60%, rgba(8, 145, 178, 0.08) 0%, transparent 60%);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .product-icon svg {
+            width: 64px;
+            height: 64px;
+        }
+
+        .title {
+            font-size: 56px;
+            font-weight: 700;
+            color: #F1F5F9;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            color: #0891B2;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .description {
+            font-size: 22px;
+            color: rgba(241, 245, 249, 0.55);
+            font-weight: 400;
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .badges {
+            display: flex;
+            gap: 16px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border: 1px solid rgba(8, 145, 178, 0.3);
+            border-radius: 20px;
+            color: rgba(241, 245, 249, 0.7);
+            font-size: 15px;
+        }
+
+        .badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .studio {
+            font-size: 16px;
+            color: rgba(241, 245, 249, 0.3);
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="content">
+        <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6-6 6 6"/>
+                <path d="M6 15l6 6 6-6"/>
+                <circle cx="12" cy="12" r="2"/>
+            </svg>
+        </div>
+        <h1 class="title">Pipe Band Predictor</h1>
+        <p class="tagline">Predict. Compete. Win.</p>
+        <p class="description">Predict finishing positions at pipe band and solo piping/drumming contests. Compete in leagues and climb the leaderboard.</p>
+        <div class="badges">
+            <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18a6 6 0 0 0 0-12 6 6 0 0 0 0 12Z"/><path d="M12 2v2"/><path d="M12 20v2"/></svg>
+                iOS
+            </span>
+            <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 16 2-6 2 6"/><path d="M9 16H5"/><path d="M17 8v8"/><path d="M13 12h8"/></svg>
+                Android
+            </span>
+        </div>
+        <p class="studio">Surface Development</p>
+    </div>
+</body>
+</html>
