@@ -1,0 +1,2 @@
+# Include .well-known directory for Universal Links / App Links association files
+include: [".well-known"]

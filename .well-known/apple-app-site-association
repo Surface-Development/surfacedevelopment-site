@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "2DGK7F9D85.com.surfacedevelopment.pipebandpredictor",
+        "paths": ["/pipebandpredictor/invite/*"]
+      }
+    ]
+  }
+}

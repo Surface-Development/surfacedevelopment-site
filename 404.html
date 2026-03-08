@@ -8,6 +8,27 @@
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#0A0F1E">
 
+    <script>
+    (function () {
+      // Redirect invite deep links to the appropriate app store
+      if (/^\/pipebandpredictor\/invite\/.+/.test(window.location.pathname)) {
+        var ua = navigator.userAgent || '';
+        // TODO: Replace with actual store URLs once apps are published
+        var iosUrl = 'https://surfacedevelopment.co.uk/products/pipe-band-predictor.html';
+        var androidUrl = 'https://surfacedevelopment.co.uk/products/pipe-band-predictor.html';
+        var fallbackUrl = 'https://surfacedevelopment.co.uk/products/pipe-band-predictor.html';
+
+        if (/iPhone|iPad|iPod/i.test(ua)) {
+          window.location.replace(iosUrl);
+        } else if (/Android/i.test(ua)) {
+          window.location.replace(androidUrl);
+        } else {
+          window.location.replace(fallbackUrl);
+        }
+      }
+    })();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
