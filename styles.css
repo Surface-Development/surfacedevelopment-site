@@ -604,6 +604,54 @@ a:hover {
     gap: 0.5rem;
 }
 
+/* Official App Store / Google Play badges */
+.store-badges {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store-badge {
+    display: inline-block;
+    line-height: 0;
+    transition: transform var(--duration) var(--ease-out), opacity var(--duration) var(--ease-out);
+}
+
+.store-badge img {
+    display: block;
+    height: 56px;
+    width: auto;
+}
+
+a.store-badge:hover {
+    transform: translateY(-1px);
+}
+
+.store-badge--disabled {
+    opacity: 0.55;
+    cursor: default;
+    pointer-events: none;
+}
+
+.store-badges--centered {
+    justify-content: center;
+}
+
+.hero-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    margin-bottom: var(--space-md);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+/* Inside the home hero card the column is narrow, so render badges smaller
+   to keep them on a single row. */
+.hero-card .store-badge img {
+    height: 40px;
+}
+
 .badge {
     display: inline-flex;
     align-items: center;
@@ -696,16 +744,11 @@ a:hover {
 
 .device-frame {
     width: 280px;
-    height: 560px;
-    background: #111827;
-    border-radius: 36px;
-    border: 3px solid #334155;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: var(--space-sm);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
 }
 
 .device-frame-inner {
@@ -734,6 +777,10 @@ a:hover {
 }
 
 .featured-cta {
+    margin-top: var(--space-md);
+}
+
+.featured-cta + .store-badges {
     margin-top: var(--space-md);
 }
 
@@ -895,6 +942,24 @@ a:hover {
     padding: var(--space-3xl) 0 var(--space-xl);
 }
 
+.product-hero-layout {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.product-hero-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 26px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
+    flex-shrink: 0;
+}
+
+.product-hero-text {
+    min-width: 0;
+}
+
 .product-hero h1 {
     margin-bottom: 0.5rem;
 }
@@ -932,32 +997,25 @@ a:hover {
 }
 
 .screenshot-placeholder {
-    aspect-ratio: 9/16;
-    max-height: 480px;
-    background: var(--surface-1);
+    background: #ffffff;
     border-radius: var(--radius-lg);
-    border: 2px solid var(--glass-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8125rem;
+    border: 1px solid var(--glass-border);
+    padding: var(--space-sm);
     overflow: hidden;
 }
 
 .screenshot-placeholder img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
+    height: auto;
+    border-radius: calc(var(--radius-lg) - 0.5rem);
 }
 
 .device-frame img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+    height: auto;
+    border-radius: calc(var(--radius-lg) - 0.5rem);
 }
 
 .download-ctas {
@@ -1041,6 +1099,62 @@ a:hover {
 .contact-form {
     margin-top: var(--space-xl);
     text-align: left;
+}
+
+.partnership-section {
+    text-align: center;
+}
+
+.partnership-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partnership-form {
+    display: flex;
+    gap: var(--space-sm);
+    max-width: 520px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.partnership-form input[type="email"] {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    background: rgba(15, 23, 42, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: border-color var(--duration) var(--ease-out);
+}
+
+.partnership-form input[type="email"]:focus {
+    border-color: var(--cyan);
+    background: rgba(8, 145, 178, 0.02);
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.08);
+}
+
+.partnership-form .btn {
+    flex: 0 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .form-group {
@@ -1471,6 +1585,24 @@ main {
 }
 
 @media (max-width: 640px) {
+    /* Product hero stacks on mobile */
+    .product-hero-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    .product-hero-icon {
+        width: 88px;
+        height: 88px;
+        border-radius: 20px;
+    }
+
+    /* Smaller store badges on mobile */
+    .store-badge img {
+        height: 40px;
+    }
+
     /* Mobile nav */
     .nav-toggle {
         display: flex;
@@ -1556,12 +1688,11 @@ main {
         grid-template-columns: 1fr;
     }
 
-    /* Screenshot grid */
+    /* Screenshot grid - stack on mobile */
     .screenshot-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .screenshot-placeholder {
-        max-height: 320px;
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

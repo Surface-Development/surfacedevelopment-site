@@ -45,7 +45,8 @@
         "name": "Pipe Band Predictor",
         "description": "Predict finishing positions at pipe band and solo piping/drumming contests. Compete in leagues and climb the leaderboard.",
         "applicationCategory": "SportsApplication",
-        "operatingSystem": "iOS, Android",
+        "operatingSystem": "iOS",
+        "downloadUrl": "https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252",
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -117,17 +118,20 @@
             <!-- Product Hero -->
             <section class="product-hero">
                 <div class="container">
-                    <h1 class="stagger stagger-1">Pipe Band Predictor</h1>
-                    <p class="product-tagline stagger stagger-2">Predict. Compete. Win.</p>
-                    <div class="product-hero-badges stagger stagger-3">
-                        <span class="badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18a6 6 0 0 0 0-12 6 6 0 0 0 0 12Z"/><path d="M12 2v2"/><path d="M12 20v2"/></svg>
-                            iOS
-                        </span>
-                        <span class="badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 16 2-6 2 6"/><path d="M9 16H5"/><path d="M17 8v8"/><path d="M13 12h8"/></svg>
-                            Android
-                        </span>
+                    <div class="product-hero-layout">
+                        <img src="/assets/pipe-band-predictor-icon.png" alt="Pipe Band Predictor app icon" class="product-hero-icon stagger stagger-1">
+                        <div class="product-hero-text">
+                            <h1 class="stagger stagger-1">Pipe Band Predictor</h1>
+                            <p class="product-tagline stagger stagger-2">Predict. Compete. Win.</p>
+                            <div class="store-badges stagger stagger-3">
+                                <a href="https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252" class="store-badge" target="_blank" rel="noopener" aria-label="Download Pipe Band Predictor on the App Store">
+                                    <img src="/assets/badges/app-store-badge.svg" alt="Download on the App Store">
+                                </a>
+                                <span class="store-badge store-badge--disabled" aria-label="Coming soon to Google Play">
+                                    <img src="/assets/badges/google-play-badge.svg" alt="Get it on Google Play - coming soon">
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -176,9 +180,9 @@
                     <span class="section-label">Preview</span>
                     <h2 class="section-heading">See it in action</h2>
                     <div class="screenshot-grid">
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/home.PNG" alt="Home screen"></div>
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/predictions.PNG" alt="Predictions screen"></div>
-                        <div class="screenshot-placeholder"><img src="/assets/screenshots/results.PNG" alt="Leagues screen"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/predictions.png" alt="Predictions screen showing podium picks for the British Championships"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/leaderboard.png" alt="Season leaderboard ranking players by points"></div>
+                        <div class="screenshot-placeholder"><img src="/assets/screenshots/leagues.png" alt="Leagues screen for creating and joining private leagues"></div>
                     </div>
                 </div>
             </section>
@@ -188,13 +192,31 @@
                 <div class="container">
                     <span class="section-label">Download</span>
                     <h2 class="section-heading">Get the app</h2>
-                    <p class="download-description">Available on iOS and Android. Download links coming soon.</p>
-                    <div class="download-ctas download-ctas--centered">
-                        <!-- TODO: Replace # with actual App Store URL once published -->
-                        <a href="#" class="btn btn-primary btn-disabled">App Store - Coming Soon</a>
-                        <!-- TODO: Replace # with actual Play Store URL once published -->
-                        <a href="#" class="btn btn-ghost btn-disabled">Play Store - Coming Soon</a>
+                    <p class="download-description">Available now on the App Store. Android version coming soon.</p>
+                    <div class="store-badges store-badges--centered">
+                        <a href="https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252" class="store-badge" target="_blank" rel="noopener" aria-label="Download Pipe Band Predictor on the App Store">
+                            <img src="/assets/badges/app-store-badge.svg" alt="Download on the App Store">
+                        </a>
+                        <span class="store-badge store-badge--disabled" aria-label="Coming soon to Google Play">
+                            <img src="/assets/badges/google-play-badge.svg" alt="Get it on Google Play - coming soon">
+                        </span>
                     </div>
+                </div>
+            </section>
+
+            <!-- Partnerships -->
+            <section class="section fade-in partnership-section" id="partnerships">
+                <div class="container">
+                    <span class="section-label">Partnerships</span>
+                    <h2 class="section-heading">Partner with us</h2>
+                    <p class="partnership-description">Run a contest, association, or event? We'd love to talk. Drop your email and we'll be in touch with the details.</p>
+                    <form class="partnership-form" action="https://formspree.io/f/meeljvnz" method="POST">
+                        <input type="hidden" name="_subject" value="Pipe Band Predictor - partnership enquiry">
+                        <input type="hidden" name="enquiry_type" value="Pipe Band Predictor partnership">
+                        <label for="partnership-email" class="visually-hidden">Your email</label>
+                        <input type="email" id="partnership-email" name="email" placeholder="you@example.com" required>
+                        <button type="submit" class="btn btn-primary">Get in touch</button>
+                    </form>
                 </div>
             </section>
 
