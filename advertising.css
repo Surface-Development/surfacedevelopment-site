@@ -1141,6 +1141,15 @@
     border-radius: 8px;
     background: rgba(60, 140, 202, 0.18);
     border: 1px solid rgba(60, 140, 202, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ppp-blue);
+}
+
+.adv-mock-logo svg {
+    width: 1.15em;
+    height: 1.15em;
 }
 
 .adv-mock-sponsor {
@@ -1197,6 +1206,15 @@
     border-radius: 14px;
     background: rgba(60, 140, 202, 0.18);
     border: 1px solid rgba(60, 140, 202, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ppp-blue);
+}
+
+.adv-mock-modal-logo svg {
+    width: 55%;
+    height: 55%;
 }
 
 .adv-mock-modal-name {
@@ -1267,6 +1285,13 @@
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 6px 18px rgb(20 69 113 / 0.3);
+    overflow: hidden;
+}
+
+.adv-mock-splash-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .adv-mock-splash-name {
@@ -1286,12 +1311,27 @@
 }
 
 .adv-mock-splash-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
     font-size: 0.62rem;
     font-weight: 600;
     color: var(--ppp-text);
     background: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
     padding: 0.3em 0.7em;
+}
+
+.adv-mock-splash-glass {
+    display: inline-flex;
+    width: 1.3em;
+    height: 1.3em;
+    color: #C8941A;
+}
+
+.adv-mock-splash-glass svg {
+    width: 100%;
+    height: 100%;
 }
 
 /* Figcaption: placement name, one line, tier pill, illustrative note */
@@ -1453,6 +1493,353 @@
 
 .advertise .adv-studio a:hover {
     border-bottom-color: var(--ppp-gold);
+}
+
+/* ── Scroll demo: pick → spotlight → result (full-bleed) ────── */
+.adv-sd {
+    position: relative;
+    z-index: 2;
+}
+
+.adv-sd-stage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 5vh, 4rem);
+    padding: var(--space-2xl) var(--space-lg);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.adv-sd-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Beat 1 background shows by default for the static fallback. */
+.adv-sd-bg--1 {
+    opacity: 1;
+    background: radial-gradient(125% 120% at 50% 0%, #FFFFFF, #E6EEF7);
+}
+
+.adv-sd-bg--2 {
+    background: radial-gradient(90% 90% at 50% 42%, #173353, #091525);
+}
+
+.adv-sd-bg--3 {
+    background: radial-gradient(130% 120% at 50% 100%, #DDEBF8, #ECF3FB);
+}
+
+.adv-sd-head {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+}
+
+.adv-sd-captions {
+    position: relative;
+    font-size: clamp(1.6rem, 1.1rem + 2.4vw, 2.7rem);
+    height: 1.4em;
+    margin-top: var(--space-sm);
+}
+
+.adv-sd-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: clamp(1.6rem, 1.1rem + 2.4vw, 2.7rem);
+}
+
+/* Beat 1 caption shows by default for the static fallback. */
+.adv-sd-caption[data-beat="1"] {
+    opacity: 1;
+}
+
+.adv-sd-caption[data-beat="2"] {
+    color: #FFFFFF;
+}
+
+.adv-sd-canvas {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    min-height: 420px;
+}
+
+.adv-sd-scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+/* Beat 1 scene shows by default for the static fallback. */
+.adv-sd-scene--predict {
+    opacity: 1;
+}
+
+/* Scene A — picks */
+.adv-sd-scene-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ppp-text-2);
+}
+
+.adv-sd-picks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.adv-sd-pick {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    will-change: transform, opacity;
+}
+
+.adv-sd-pick-name {
+    flex: 1;
+    background: #fff;
+    color: #1B2A3A;
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 8px 24px -10px rgba(20, 69, 113, 0.4);
+}
+
+.adv-sd-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    background: #7C93A8;
+}
+
+.adv-sd-badge--gold {
+    background: linear-gradient(135deg, #F0C53D, #E8B923);
+    color: #3D2C00;
+}
+
+.adv-sd-badge--silver {
+    background: linear-gradient(135deg, #D2DAE3, #AEB9C6);
+    color: #2A3540;
+}
+
+.adv-sd-badge--bronze {
+    background: linear-gradient(135deg, #D08A4E, #B87333);
+    color: #3D2300;
+}
+
+/* Scene B — spotlight */
+.adv-sd-spot-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 24px;
+    padding: 2.6rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    box-shadow: 0 50px 100px -24px rgba(0, 0, 0, 0.55);
+}
+
+.adv-sd-spot-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ppp-blue);
+}
+
+.adv-sd-spot-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #F0C53D, #C8941A);
+    box-shadow: 0 10px 24px -8px rgba(200, 148, 26, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adv-sd-spot-logo svg {
+    width: 38px;
+    height: 38px;
+}
+
+.adv-sd-spot-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #15243A;
+}
+
+.adv-sd-spot-line {
+    font-size: 1rem;
+    color: #5B6B7E;
+}
+
+.adv-sd-spot-pill {
+    margin-top: 0.5rem;
+    background: linear-gradient(135deg, #FACC15, #E8B923);
+    color: #3D2C00;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 999px;
+}
+
+/* Scene C — leaderboard */
+.adv-sd-board {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 40px 90px -24px rgba(20, 69, 113, 0.55);
+}
+
+.adv-sd-board-head {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 0.8rem;
+    background: #2F6DA8;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.9rem 1.2rem 0.7rem;
+}
+
+.adv-sd-board-body {
+    --row-h: 52px;
+    position: relative;
+    background: linear-gradient(160deg, #3C8CCA, #2C6299);
+    padding: 0.5rem 1rem 1rem;
+}
+
+.adv-sd-slots {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--row-h) - 34px);
+    padding-top: calc((var(--row-h) - 34px) / 2);
+}
+
+.adv-sd-slot {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: #6E86A0;
+    color: #fff;
+}
+
+.adv-sd-rows {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: calc(7 * var(--row-h));
+}
+
+.adv-sd-row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--row-h);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 0.6rem 0 4rem;
+    font-size: 0.95rem;
+    color: #fff;
+    will-change: transform;
+}
+
+.adv-sd-row:nth-child(1) { top: 0; }
+.adv-sd-row:nth-child(2) { top: calc(1 * var(--row-h)); }
+.adv-sd-row:nth-child(3) { top: calc(2 * var(--row-h)); }
+.adv-sd-row:nth-child(4) { top: calc(3 * var(--row-h)); }
+.adv-sd-row:nth-child(5) { top: calc(4 * var(--row-h)); }
+.adv-sd-row:nth-child(6) { top: calc(5 * var(--row-h)); }
+.adv-sd-row:nth-child(7) { top: calc(6 * var(--row-h)); }
+
+.adv-sd-row-pts {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
+.adv-sd-row--you {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.adv-sd-progress {
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.adv-sd-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: rgba(120, 140, 165, 0.4);
+    transition: background 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.adv-sd-dot.is-active {
+    background: var(--ppp-blue);
+    transform: scale(1.35);
+}
+
+@media (max-width: 600px) {
+    .adv-sd-canvas {
+        max-width: 400px;
+        min-height: 380px;
+    }
+
+    .adv-sd-board-body {
+        --row-h: 46px;
+    }
 }
 
 /* ── Responsive ────────────────────────────────────────────── */
