@@ -1145,6 +1145,21 @@ a.store-badge:hover {
     flex: 0 0 auto;
 }
 
+.partnership-advertise {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--glass-border);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+.partnership-advertise a {
+    font-weight: 600;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
