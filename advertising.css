@@ -506,6 +506,73 @@
     margin: var(--space-md) 0 0;
 }
 
+/* ── Two choices (which window × how far) ──────────────────── */
+.adv-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto var(--space-lg);
+    background: var(--ppp-bg);
+    border: 1px solid var(--ppp-border);
+    border-radius: var(--ppp-radius-card);
+    box-shadow: var(--ppp-shadow);
+    overflow: hidden;
+}
+
+.adv-choice {
+    padding: var(--space-lg);
+}
+
+.adv-choice + .adv-choice {
+    border-left: 1px solid var(--ppp-border);
+}
+
+.adv-choice-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ppp-blue-800);
+    background: linear-gradient(135deg, var(--ppp-amber), var(--ppp-gold));
+    margin-bottom: 0.7rem;
+}
+
+.adv-choice-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ppp-blue);
+    margin-bottom: 0.5rem;
+}
+
+.advertise .adv-choice-lead {
+    font-weight: 600;
+    color: var(--ppp-text);
+    margin: 0 0 0.35rem;
+}
+
+.adv-choice-range {
+    font-size: 0.92rem;
+    color: var(--ppp-text-2);
+    margin: 0;
+}
+
+@media (max-width: 560px) {
+    .adv-choices {
+        grid-template-columns: 1fr;
+    }
+
+    .adv-choice + .adv-choice {
+        border-left: none;
+        border-top: 1px solid var(--ppp-border);
+    }
+}
+
 /* ── Tiers (podium: bronze / silver / gold) ────────────────── */
 .adv-tiers {
     display: grid;
